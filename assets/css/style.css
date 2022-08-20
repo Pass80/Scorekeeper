@@ -55,7 +55,7 @@ main {
     font-size: 2.5rem;
     padding: 0;
     color: #fff;
-    width: 8.5rem;
+    /* width: 8.5rem; */
     text-align: center;
 }
 
@@ -154,7 +154,7 @@ main {
     padding: 20px;
     border: 1px solid #888;
     border-radius: 1.5rem;
-    width: 80%;
+    width: 50%;
 }
 
 /* The Close Button */
@@ -168,66 +168,6 @@ main {
     font-weight: bold;
 }
 
-.modal2 {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* Modal Content */
-.modal2-content {
-    position: relative;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-around;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 1.5rem;
-    width: 80%;
-}
-
-#plr-list1 {
-    width: 40%;
-    background-color: #97f5bb;
-    border-radius: 1.5rem;
-    list-style-type: number;
-}
-
-#plr-list2 {
-    width: 40%;
-    background-color: #525df4;
-    border-radius: 1.5rem;
-    list-style-type: number;
-}
-
-.modal2-content ul li {
-    margin-left: 3rem;
-    padding: 0.5rem 0;
-    font-size: 1.5rem;
-}
-
-/* The Close Button */
-.close2 {
-    position: absolute;
-    display: inline-block;
-    top: -0.2rem;
-    right: 0.8rem;
-    color: #aaaaaa;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close2:hover,
 .close:hover {
     cursor: pointer;
 }
@@ -241,6 +181,7 @@ form button {
     width: 5rem;
     margin-top: 1rem;
     height: 1.5rem;
+    font-size: 1rem;
     border: none;
     border-radius: 0.5rem;
 }
@@ -264,8 +205,7 @@ input {
 }
 
 label {
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
+    padding: 0.5rem;
 }
 
 .btns-section button {
