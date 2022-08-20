@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Fjalla+One&family=Gilda+Display&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2c2c2c;
+    font-family: 'Orbitron';
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    width: 100%;
+}
+
+.score-screen {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.home-border,
+.away-border {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 2rem;
+}
+
+.home-border {
+    border: 0.2rem solid #97f5bb;
+}
+
+.away-border {
+    border: 0.2rem solid #525df4;
+}
+
+.home-border p,
+.away-border p {
+    position: absolute;
+    bottom: -1.25rem;
+    background-color: #2c2c2c;
+    font-size: 2.5rem;
+    padding: 0;
+    color: #fff;
+    width: 8.5rem;
+    text-align: center;
+}
+
+.home-screen,
+.away-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26rem;
+    height: 26rem;
+    background-color: #000000;
+    border-radius: 1.5rem;
+}
+
+.home-screen h3,
+.away-screen h3 {
+    color: #fff;
+    font-size: 9rem;
+}
+
+.score-btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.home-btns,
+.away-btns {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.home-btns button,
+.away-btns button {
+    font-size: 2.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
+    border: none;
+    border-radius: 1.5rem;
+}
+
+.home-btns button {
+    background-color: #97f5bb;
+    color: #fff;
+}
+
+.away-btns button {
+    background-color: #525df4;
+    color: #fff;
+}
+
+.btns-section {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.reset,
+.modal1,
+.names {
+    padding-top: 2.5rem;
+}
+
+.reset-btn,
+.modal1-btn,
+.names-btn {
+    width: 7.7rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 1.5rem;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    display: inline-block;
+    top: -0.2rem;
+    right: 0.8rem;
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal2-content {
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 1.5rem;
+    width: 80%;
+}
+
+#plr-list1 {
+    width: 40%;
+    background-color: #97f5bb;
+    border-radius: 1.5rem;
+    list-style-type: number;
+}
+
+#plr-list2 {
+    width: 40%;
+    background-color: #525df4;
+    border-radius: 1.5rem;
+    list-style-type: number;
+}
+
+.modal2-content ul li {
+    margin-left: 3rem;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+/* The Close Button */
+.close2 {
+    position: absolute;
+    display: inline-block;
+    top: -0.2rem;
+    right: 0.8rem;
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close2:hover,
+.close:hover {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form button {
+    width: 5rem;
+    margin-top: 1rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#add-home {
+    background-color: #97f5bb;
+}
+
+#add-away {
+    background-color: #525df4;
+}
+input {
+    height: 3rem;
+    width: 20rem;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    outline: none;
+    border: 1px solid gray;
+    font-family: 'Orbitron';
+    font-size: 1.5rem;
+}
+
+label {
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.btns-section button {
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    /* background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%); */
+    background-color: #ffab23;
+    border-radius: 10px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #ffee66;
+}
+
+.btns-section button:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+}
+.btns-section button:active {
+    position: relative;
+    top: 1px;
+}

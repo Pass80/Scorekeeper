@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="hideModal()">&times;</span>
+                <div class="add-hplayer">
+                    <form onsubmit="event.preventDefault()">
+                        <label for="name1">Home player</label>
+                        <input type="text" id="name1" name="name1" />
+                        <button
+                            type="submit"
+                            id="add-home"
+                            onclick="savePlayersNames1()"
+                        >
+                            Add
+                        </button>
+                    </form>
+                </div>
+                <div class="add-aplayer">
+                    <form onsubmit="event.preventDefault()">
+                        <label for="name2"> Away player</label>
+                        <input type="text" id="name2" name="name2" />
+                        <button
+                            type="submit"
+                            id="add-away"
+                            onclick="savePlayersNames2()"
+                        >
+                            Add
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="myModal2" class="modal2">
+            <!-- Modal content -->
+            <div class="modal2-content">
+                <span class="close2" onclick="hideModal2()">&times;</span>
+                <ul id="plr-list1"></ul>
+                <ul id="plr-list2"></ul>
+            </div>
+        </div>
+        <main>
+            <section class="score-screen">
+                <div class="home-border">
+                    <p>Home</p>
+                    <div class="home-screen">
+                        <h3 id="home-score">0</h3>
+                    </div>
+                </div>
+                <div class="away-border">
+                    <p>Away</p>
+                    <div class="away-screen">
+                        <h3 id="away-score">0</h3>
+                    </div>
+                </div>
+            </section>
+            <section class="score-btns">
+                <div class="home-btns">
+                    <button onclick="addOnePointH()">+1</button>
+                    <button onclick="addTwoPointH()">+2</button>
+                    <button onclick="addThreePointH()">+3</button>
+                </div>
+                <div class="away-btns">
+                    <button onclick="addOnePointA()">+1</button>
+                    <button onclick="addTwoPointA()">+2</button>
+                    <button onclick="addThreePointA()">+3</button>
+                </div>
+            </section>
+            <section class="btns-section">
+                <div class="modal1">
+                    <button class="modal1-btn" id="modal" onclick="showModal()">
+                        Add players
+                    </button>
+                </div>
+                <div class="names">
+                    <button class="names-btn" id="names" onclick="showModal2()">
+                        Show Teams
+                    </button>
+                </div>
+                <div class="reset">
+                    <button class="reset-btn" id="reset" onclick="resetScore()">
+                        Reset
+                    </button>
+                </div>
+            </section>
+        </main>
+        <script src="assets/main.js"></script>
+    </body>
+</html>
