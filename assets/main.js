@@ -7,15 +7,15 @@ const awayInput = document.getElementById('name2');
 const teamName1 = document.getElementById('team-name1');
 const teamName2 = document.getElementById('team-name2');
 
-// create a function which add the teams names and clear the input field
-const savePlayersNames1 = () => {
+// create a function which adds the teams names and clear the input field
+const saveTeamsNames1 = () => {
     teamName1.innerHTML = homeInput.value;
     homeInput.value = '';
     teamName2.innerHTML = awayInput.value;
     awayInput.value = '';
 };
 
-// create the functions that add the points to the screen for the home team
+// create the functions that adds the points to the screen for the home team
 const addOnePointH = () => {
     homeScore.innerHTML = +homeScore.innerHTML + 1;
 };
@@ -26,7 +26,7 @@ const addThreePointH = () => {
     homeScore.innerHTML = +homeScore.innerHTML + 3;
 };
 
-// create the functions that add the points to the screen for the away team
+// create the functions that adds the points to the screen for the away team
 const addOnePointA = () => {
     awayScore.innerHTML = +awayScore.innerHTML + 1;
 };
@@ -53,10 +53,6 @@ const showModal = () => {
 const hideModal = () => {
     modal.style.display = 'none';
 };
-
-// const hideModal2 = () => {
-//     modal2.style.display = 'none';
-// };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
